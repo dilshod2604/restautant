@@ -1,10 +1,11 @@
 import React, { ReactNode } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import scss from "./LayoutSite.module.scss";
+import Header from "./header/Header";
+import Footer from "./footer/Footer";
 
 const Layoutsite = ({ children }: { children: ReactNode }) => {
   return (
-    <div>
+    <div className={scss.LayoutSite}>
       <Header />
       <main>{children}</main>
       <Footer />
