@@ -1,15 +1,31 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import {
+  Shalimar,
+  Crimson_Text,
+  League_Spartan,
+  Montserrat,
+} from "next/font/google";
+import "./globals.scss";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const shalimarSans = Shalimar({
+  variable: "--font-shalimar-sans",
   subsets: ["latin"],
+  weight: "400",
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const crimsonTextSans = Crimson_Text({
+  variable: "--font-crimson-text-sans",
   subsets: ["latin"],
+  weight: "600",
+});
+const leagueSpartanSans = League_Spartan({
+  variable: "--font-league-spartan-sans",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+});
+const montserratSans = Montserrat({
+  variable: "--font-montserrat-sans",
+  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -24,7 +40,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${shalimarSans.variable} ${crimsonTextSans.variable} ${leagueSpartanSans.variable} ${montserratSans.variable}`}
+      >
         {children}
       </body>
     </html>
