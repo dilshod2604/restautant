@@ -1,0 +1,110 @@
+.Header {
+  padding: 20px 0;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(20px, 4vw, 50px);
+    h1 {
+      font-size: 30px;
+      font-family: Crimson_Text;
+      font-weight: 400;
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: clamp(20px, 4vw, 50px);
+
+      .navigation {
+        display: flex;
+        gap: clamp(20px, 4vw, 50px);
+
+        a {
+          font-size: clamp(14px, 2vw, 17px);
+          color: white;
+          font-family: League_Spartan;
+          font-weight: 500;
+        }
+      }
+
+      .searchContainer {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .searchIcon {
+          position: absolute;
+          left: 10px;
+          color: white; /* Цвет иконки */
+        }
+
+        input {
+          width: clamp(140px, 12vw, 187px);
+          height: clamp(25px, 4vw, 35px);
+          padding-left: 40px; /* Отступ для текста, чтобы не перекрывать иконку */
+          border-radius: 30px;
+          border: none;
+          background: #ef272c;
+          color: white; /* Цвет текста в инпуте */
+          font-size: 14px; /* Размер текста */
+
+          &::placeholder {
+            color: white; /* Белый цвет placeholder */
+            font-size: clamp(
+              10px,
+              1.7vw,
+              16px
+            ); /* Увеличенный размер placeholder */
+            opacity: 1; /* Убираем прозрачность */
+          }
+        }
+      }
+      .select {
+        width: clamp(62px, 4vw, 86px);
+        height: clamp(25px, 4vw, 37px);
+
+        padding-left: 15px; // Отступ для текста
+        background: transparent; // Прозрачный фон
+        border: none; // Убираем границы
+        color: white; // Цвет текста
+        font-size: 14px; // Размер текста
+        appearance: none; // Убираем стандартный стиль браузера
+        outline: none; // Убираем обводку при фокусе
+
+        // Настройка иконки через псевдоэлементы
+        background-image: url("/path-to-icon.svg"); // Добавьте путь к иконке
+        background-position: right 10px center; // Позиция иконки
+        background-repeat: no-repeat;
+
+        option {
+          color: black; // Цвет текста в выпадающем списке
+          background: white; // Фон для списка
+        }
+      }
+    }
+
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+
+      span {
+        width: 25px;
+        height: 3px;
+        background: white;
+        border-radius: 3px;
+      }
+    }
+    @media (max-width: 780px) {
+      .menu {
+        display: none; // Скрываем меню на маленьких экранах
+      }
+
+      .burger {
+        display: flex; // Показываем бургер-меню
+      }
+    }
+  }
+}

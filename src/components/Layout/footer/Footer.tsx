@@ -21,6 +21,7 @@ const Footer = () => {
             <div className={scss.block__2}></div>
           </div>
         </div>
+
       </div>
     </footer>
   );
