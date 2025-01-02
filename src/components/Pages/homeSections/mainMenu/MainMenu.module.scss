@@ -1,0 +1,126 @@
+.MainMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    h3 {
+      font-size: 40px;
+      font-family: Shalimar;
+    }
+  }
+  h1 {
+    font-family: Silk Serif;
+    line-height: 61.36px;
+    font-size: 40px;
+  }
+  .blocks {
+    display: flex;
+    align-items: start;
+    gap: 100px;
+    justify-content: center;
+    .block1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 400px;
+      background: rgb(31, 39, 49);
+      padding-block: 10px;
+      .buttons {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: transparent;
+        position: relative;
+        .button_text {
+          border: none;
+          width: 230px;
+          background: transparent;
+          border-bottom: 0.4px solid rgb(188, 177, 177);
+          padding-block: 20px;
+          color: rgb(255, 255, 255);
+          font-family: Crimson_Text;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 37px;
+          letter-spacing: 0%;
+          text-align: center;
+          cursor: pointer;
+          &.active {
+            z-index: 1;
+          }
+        }
+        .button_active {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: rgb(239, 39, 44);
+          width: 100%;
+          height: 100%;
+        }
+        .button_line {
+          position: absolute;
+          width: 60px;
+          right: -30;
+          height: 2;
+          z-index: 2;
+          background: #fff;
+        }
+      }
+    }
+    .block2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 600px;
+      padding: 10px;
+      gap: 46px;
+      .menu_item_box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 13px;
+        .menu_item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .item_name {
+            color: rgb(255, 255, 255);
+            font-family: Crimson_Text;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 31px;
+            letter-spacing: 0%;
+            text-align: left;
+          }
+          .item_price {
+            color: rgb(239, 39, 44);
+            font-family: Crimson_Text;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 31px;
+            letter-spacing: 0%;
+            text-align: left;
+          }
+        }
+        .item_description {
+          max-width: 400px;
+          color: rgb(255, 255, 255);
+          font-family: League_Spartan;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: 0%;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

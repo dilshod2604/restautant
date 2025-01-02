@@ -1,10 +1,138 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import scss from "./MainMenu.module.scss";
+import left from "../../../../assets/main_menu/left.png";
+import right from "../../../../assets/main_menu/right.png";
+import Image from "next/image";
+import { main_menu } from "@/src/constants/menu";
+import { LayoutGroup, motion } from "framer-motion";
+
 const MainMenu = () => {
+  const [isActive, setIsActive] = useState<number>(0);
+  const [animationKey, setAnimationKey] = useState(0);
+  const [menuData, setMenuData] = useState(
+    main_menu.filter((el) => el.category === "desserts")
+  );
+  //filterButtons
+  const buttons = main_menu.reduce<string[]>((acc, el) => {
+    if (acc.includes(el.category)) return acc;
+    return [...acc, el.category];
+  }, []);
+  //filterAction
+  const handleFilter = (category: string) => {
+    setMenuData(main_menu.filter((el) => el.category === category));
+    setAnimationKey((prevKey) => prevKey + 1);
+  };
+
+  const buttonBlackVariant = {
+    hidden: {
+      x: -20,
+      opacity: 0,
+    },
+    visible: (i) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: i * 0.2,
+        ease: "easeInOut",
+      },
+    }),
+  };
+
+  const menuItemVariants = {
+    hidden: {
+      opacity: 0,
+      x: -5,
+    },
+    visible: (i) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: i * 0.2,
+        ease: "easeInOut",
+      },
+    }),
+  };
   return (
     <section className={scss.MainMenu}>
       <div className="container">
-        <div className={scss.MainMenu}>MainMenu</div>
+        <div className={scss.MainMenu}>
+          <div className={scss.menu}>
+            <Image src={left} alt="img" width={25} height={10} />
+            <h3>Main Menu</h3>
+            <Image src={right} alt="img" width={25} height={10} />
+          </div>
+          <h1>
+            Exceptional Quality. <br /> Delightfully Delicious
+          </h1>
+          <div className={scss.blocks}>
+            <LayoutGroup>
+              <motion.div className={scss.block1} layout>
+                {buttons.map((el, index) => (
+                  <motion.button
+                    layout
+                    key={index}
+                    onClick={() => {
+                      handleFilter(el);
+                      setIsActive(index);
+                    }}
+                    className={scss.buttons}
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={buttonBlackVariant}
+                    custom={index}
+                    viewport={{ once: true, amount: 0.8 }}
+                  >
+                    <p
+                      className={`${scss.button_text} ${
+                        isActive === index ? scss.active : ""
+                      }`}
+                    >
+                      {el}
+                    </p>
+
+                    {isActive === index && (
+                      <motion.span
+                        className={scss.button_active}
+                        initial={{
+                          opacity: 0,
+                        }}
+                        animate={{
+                          opacity: 1,
+                          transition: {
+                            duration: 1,
+                            ease: "linear",
+                          },
+                        }}
+                      ></motion.span>
+                    )}
+                    {isActive === index && (
+                      <span className={scss.button_line}></span>
+                    )}
+                  </motion.button>
+                ))}
+              </motion.div>
+            </LayoutGroup>
+            <div className={scss.block2}>
+              {menuData.map((el, index) => (
+                <motion.div
+                  key={index}
+                  className={scss.menu_item_box}
+                  initial="hidden"
+                  animate="visible"
+                  variants={menuItemVariants}
+                  custom={index}
+                >
+                  <span className={scss.menu_item}>
+                    <h4 className={scss.item_name}>{el.name}</h4>
+                    <span className={scss.item_price}>${el.price}</span>
+                  </span>
+                  <p className={scss.item_description}>{el.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
