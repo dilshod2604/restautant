@@ -6,10 +6,16 @@
     align-items: center;
     justify-content: space-between;
     gap: clamp(20px, 4vw, 50px);
+    h1 {
+      font-size: 30px;
+      font-family: Crimson_Text;
+      font-weight: 400;
+    }
     .menu {
       display: flex;
       align-items: center;
       gap: clamp(20px, 4vw, 50px);
+
       .navigation {
         display: flex;
         gap: clamp(20px, 4vw, 50px);
@@ -17,6 +23,8 @@
         a {
           font-size: clamp(14px, 2vw, 17px);
           color: white;
+          font-family: League_Spartan;
+          font-weight: 500;
         }
       }
 
