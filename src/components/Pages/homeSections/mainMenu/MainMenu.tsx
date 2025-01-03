@@ -6,10 +6,13 @@ import right from "../../../../assets/main_menu/right.png";
 import Image from "next/image";
 import { main_menu } from "@/src/constants/menu";
 import { LayoutGroup, motion } from "framer-motion";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
 const MainMenu = () => {
   const [isActive, setIsActive] = useState<number>(0);
   const [animationKey, setAnimationKey] = useState(0);
+  const [active, setActive] = useState<boolean>(false);
   const [menuData, setMenuData] = useState(
     main_menu.filter((el) => el.category === "desserts")
   );
@@ -29,7 +32,7 @@ const MainMenu = () => {
       x: -20,
       opacity: 0,
     },
-    visible: (i) => ({
+    visible: (i: number) => ({
       opacity: 1,
       x: 0,
       transition: {
@@ -44,10 +47,11 @@ const MainMenu = () => {
       opacity: 0,
       x: -5,
     },
-    visible: (i) => ({
+    visible: (i: number) => ({
       opacity: 1,
       x: 0,
       transition: {
+        duration: 1,
         delay: i * 0.2,
         ease: "easeInOut",
       },
@@ -113,7 +117,7 @@ const MainMenu = () => {
                 ))}
               </motion.div>
             </LayoutGroup>
-            <div className={scss.block2}>
+            <div className={scss.block2} key={animationKey}>
               {menuData.map((el, index) => (
                 <motion.div
                   key={index}
@@ -131,6 +135,36 @@ const MainMenu = () => {
                 </motion.div>
               ))}
             </div>
+          </div>
+          <div
+            className={scss.view_all_button}
+            onMouseEnter={() => setActive(true)}
+            onMouseLeave={() => setActive(false)}
+          >
+            <Link href="/menu" className={scss.button}>
+              View Full menu
+              <FaArrowRight className={scss.button_icon} />
+            </Link>
+            <motion.span
+              className={`${scss.button_line_1} ${active ? scss.active : ""}`}
+              animate={{
+                x: active ? -20 : 0,
+              }}
+              transition={{
+                duration: 0.2,
+                ease: "easeInOut",
+              }}
+            ></motion.span>
+            <motion.span
+              className={`${scss.button_line_2} ${active ? scss.active : ""}`}
+              animate={{
+                x: active ? 20 : 0,
+              }}
+              transition={{
+                duration: 0.2,
+                ease: "easeInOut",
+              }}
+            ></motion.span>
           </div>
         </div>
       </div>
