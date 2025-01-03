@@ -4,7 +4,7 @@ import About from "./homeSections/about/About";
 import BestSellers from "./homeSections/bestSellers/BestSellers";
 import MainMenu from "./homeSections/mainMenu/MainMenu";
 import ModernInterior from "./homeSections/modernInterior/ModernInterior";
-import Visit from "./homeSections/visit/Visit";
+import Visit from "./homeSections/modernInterior/visit/Visit";
 
 const HomePage = () => {
   return (
@@ -12,7 +12,7 @@ const HomePage = () => {
       <Welcome />
       <About />
       <BestSellers />
-      <MainMenu />
+      {/* <MainMenu /> */}
       <ModernInterior />
       <Visit />
     </React.Fragment>
