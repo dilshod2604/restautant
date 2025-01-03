@@ -1,27 +1,29 @@
 import React from "react";
-import Image from "next/image";
-// import left from "../../assets/main_menu/left.png";
 import scss from "./Footer.module.scss";
+import { LiaTelegram } from "react-icons/lia";
+import { RxInstagramLogo } from "react-icons/rx";
 
 const Footer = () => {
   return (
     <footer id="footer" className={scss.Footer}>
       <div className="container">
         <div className={scss.footer}>
-          <div className={scss.footer_blocks}>
-            <div className={scss.block__1}>
-              <div className={scss.block__visit}>
-                {/* <Image src={left} alt="img" width={25} height={10} />    */}
-                <h3>Visit Restaurant</h3>
-              </div>
-              <h1>
-                Join Us for <br /> Happy Hours
-              </h1>
+          <div className={scss.footer_content}>
+            <h1>Restaurant</h1>
+            <div className={scss.footer_nav}>
+              <a href="##">interior</a>
+              <a href="##">About us</a>
+              <a href="##">Menu</a>
+              <a href="##">Contacts</a>
             </div>
-            <div className={scss.block__2}></div>
+            <div className={scss.footer__icons}>
+              <LiaTelegram />
+              <RxInstagramLogo />
+            </div>
           </div>
-        </div>
 
+          <p className={scss.footer_study}>c 2023 Motion Study LLC</p>
+        </div>
       </div>
     </footer>
   );
