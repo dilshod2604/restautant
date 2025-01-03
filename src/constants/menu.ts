@@ -1,3 +1,10 @@
+import { StaticImageData } from "next/image";
+import image1 from "../assets/menu/photo1.png";
+import image2 from "../assets/menu/photo2.png";
+import image3 from "../assets/menu/photo3.png";
+import image4 from "../assets/menu/photo4.png";
+import image5 from "../assets/menu/photo5.png";
+import image6 from "../assets/menu/photo6.png";
 interface IExtra {
   name: string;
   price: number;
@@ -12,7 +19,7 @@ interface IMenu {
   description: string;
   category: string;
   price: number;
-  image: string;
+  image: StaticImageData;
   consistance: string[];
   extras: IExtra[];
   drinks: IDrinks[];
@@ -25,7 +32,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "desserts",
     price: 9,
-    image: "",
+    image: image1,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -54,7 +61,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "desserts",
     price: 9,
-    image: "",
+    image: image2,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -83,7 +90,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "desserts",
     price: 9,
-    image: "",
+    image: image3,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -112,7 +119,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "desserts",
     price: 9,
-    image: "",
+    image: image4,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -141,7 +148,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "desserts",
     price: 9,
-    image: "",
+    image: image5,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -170,7 +177,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "desserts",
     price: 9,
-    image: "",
+    image: image6,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -200,7 +207,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Hot drinks",
     price: 9,
-    image: "",
+    image: image1,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -229,7 +236,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Hot drinks",
     price: 9,
-    image: "",
+    image: image2,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -258,7 +265,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Hot drinks",
     price: 9,
-    image: "",
+    image: image3,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -287,7 +294,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Hot drinks",
     price: 9,
-    image: "",
+    image: image4,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -316,7 +323,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Hot drinks",
     price: 9,
-    image: "",
+    image: image5,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -345,7 +352,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Hot drinks",
     price: 9,
-    image: "",
+    image: image6,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -375,7 +382,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Cold drinks",
     price: 9,
-    image: "",
+    image: image1,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -404,7 +411,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Cold drinks",
     price: 9,
-    image: "",
+    image: image2,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -433,7 +440,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Cold drinks",
     price: 9,
-    image: "",
+    image: image3,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -462,7 +469,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Cold drinks",
     price: 9,
-    image: "",
+    image: image4,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -491,7 +498,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Cold drinks",
     price: 9,
-    image: "",
+    image: image5,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -520,7 +527,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Cold drinks",
     price: 9,
-    image: "",
+    image: image6,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -550,7 +557,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "National Foods",
     price: 9,
-    image: "",
+    image: image1,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -579,7 +586,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "National Foods",
     price: 9,
-    image: "",
+    image: image2,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -608,7 +615,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "National Foods",
     price: 9,
-    image: "",
+    image: image3,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -637,7 +644,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "National Foods",
     price: 9,
-    image: "",
+    image: image4,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -666,7 +673,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "National Foods",
     price: 9,
-    image: "",
+    image: image5,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -695,7 +702,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "National Foods",
     price: 9,
-    image: "",
+    image: image6,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -725,7 +732,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Eastern cuisine",
     price: 9,
-    image: "",
+    image: image1,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -754,7 +761,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Eastern cuisine",
     price: 9,
-    image: "",
+    image: image2,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -783,7 +790,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Eastern cuisine",
     price: 9,
-    image: "",
+    image: image3,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -812,7 +819,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Eastern cuisine",
     price: 9,
-    image: "",
+    image: image4,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -841,7 +848,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Eastern cuisine",
     price: 9,
-    image: "",
+    image: image5,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -870,7 +877,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Eastern cuisine",
     price: 9,
-    image: "",
+    image: image6,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -900,7 +907,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Fast food",
     price: 9,
-    image: "",
+    image: image1,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -929,7 +936,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Fast food",
     price: 9,
-    image: "",
+    image: image2,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -958,7 +965,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Fast food",
     price: 9,
-    image: "",
+    image: image3,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -987,7 +994,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Fast food",
     price: 9,
-    image: "",
+    image: image4,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -1016,7 +1023,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Fast food",
     price: 9,
-    image: "",
+    image: image5,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
@@ -1045,7 +1052,7 @@ export const main_menu: IMenu[] = [
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
     category: "Fast food",
     price: 9,
-    image: "",
+    image: image6,
     consistance: ["Soda", "cream", "milk", "sugar"],
     extras: [
       {
