@@ -12,7 +12,7 @@ const HomePage = () => {
       <Welcome />
       <About />
       <BestSellers />
-      {/* <MainMenu /> */}
+      <MainMenu />
       <ModernInterior />
       <Visit />
     </React.Fragment>
