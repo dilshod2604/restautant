@@ -15,6 +15,7 @@ interface IDrinks {
 }
 
 interface IMenu {
+  id: number;
   name: string;
   description: string;
   category: string;
@@ -27,6 +28,7 @@ interface IMenu {
 
 export const main_menu: IMenu[] = [
   {
+    id: 1,
     name: "Ice cream",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -56,6 +58,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 2,
     name: "Ice cream",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -85,6 +88,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 3,
     name: "Ice cream",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -114,6 +118,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 4,
     name: "Ice cream",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -143,6 +148,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 5,
     name: "Ice cream",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -172,6 +178,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 6,
     name: "Ice cream",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -202,6 +209,7 @@ export const main_menu: IMenu[] = [
   },
   //hot drinkg
   {
+    id: 7,
     name: "Tea",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -231,6 +239,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 8,
     name: "Tea",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -260,6 +269,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 9,
     name: "Tea",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -289,6 +299,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 10,
     name: "Tea",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -318,6 +329,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 11,
     name: "Tea",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -347,6 +359,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 12,
     name: "Tea",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -377,6 +390,7 @@ export const main_menu: IMenu[] = [
   },
   //cold drinks
   {
+    id: 13,
     name: "Fanta",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -406,6 +420,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 14,
     name: "Fanta",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -435,6 +450,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 15,
     name: "Fanta",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -464,6 +480,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 16,
     name: "Fanta",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -493,6 +510,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 17,
     name: "Fanta",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -522,6 +540,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 18,
     name: "Fanta",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -552,6 +571,7 @@ export const main_menu: IMenu[] = [
   },
   //National foods
   {
+    id: 19,
     name: "Besh-mark",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -581,6 +601,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 20,
     name: "Besh-mark",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -610,6 +631,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 21,
     name: "Besh-mark",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -639,6 +661,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 22,
     name: "Besh-mark",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -668,6 +691,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 23,
     name: "Besh-mark",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -697,6 +721,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 24,
     name: "Besh-mark",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -727,6 +752,7 @@ export const main_menu: IMenu[] = [
   },
   //Eastern coisine
   {
+    id: 25,
     name: "Sushi",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -756,6 +782,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 26,
     name: "Sushi",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -785,6 +812,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 27,
     name: "Sushi",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -814,6 +842,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 28,
     name: "Sushi",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -843,6 +872,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 29,
     name: "Sushi",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -872,6 +902,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 30,
     name: "Sushi",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -902,6 +933,7 @@ export const main_menu: IMenu[] = [
   },
   //Fast food
   {
+    id: 31,
     name: "Burger",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -931,6 +963,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 32,
     name: "Burger",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -960,6 +993,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 33,
     name: "Burger",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -989,6 +1023,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 34,
     name: "Burger",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -1018,6 +1053,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 35,
     name: "Burger",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",
@@ -1047,6 +1083,7 @@ export const main_menu: IMenu[] = [
     ],
   },
   {
+    id: 36,
     name: "Burger",
     description:
       "Lörem ipsum askstoppad defaktisk, logokemi. Diastat retos att endomatisk. Geogehet pultvätta, om pneumativ.",

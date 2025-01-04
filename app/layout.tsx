@@ -10,12 +10,12 @@ import "./globals.scss";
 const shalimarSans = Shalimar({
   variable: "--font-shalimar-sans",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400"],
 });
 const crimsonTextSans = Crimson_Text({
   variable: "--font-crimson-text-sans",
   subsets: ["latin"],
-  weight: "600",
+  weight: ["600"],
 });
 const leagueSpartanSans = League_Spartan({
   variable: "--font-league-spartan-sans",
