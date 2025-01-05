@@ -1,0 +1,96 @@
+.BestSellers {
+  padding: 50px 0;
+  .container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    .content {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 40px;
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 30px;
+      }
+      .head {
+        .best {
+          margin-bottom: 30px;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          .label {
+            color: white;
+            font-size: 40px;
+            font-weight: 400;
+            font-family: "Shalimar", serif;
+          }
+        }
+        .title {
+          font-size: clamp(13px, 9vw, 40px);
+          font-weight: 600;
+          line-height: 1;
+          margin-bottom: 15px;
+          font-family: "Crimson Text", serif;
+          color: white;
+        }
+        .description {
+          font-size: clamp(10px, 4vw, 18px);
+          font-weight: 400;
+          font-family: "Spartan" serif;
+          line-height: 1.6;
+          color: #a0a0a0;
+          max-width: 500px;
+        }
+      }
+      .imageGallery {
+        position: relative;
+        flex-shrink: 0;
+        .sliderContainer {
+          overflow: hidden;
+          width: clamp(250px, 90vw, 520px);
+          .sliderTrack {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            .imageWrapper {
+              position: relative;
+              min-width: clamp(100px, 20vw, 250px);
+              height: clamp(100px, 20vw, 250px);
+              overflow: hidden;
+              border-radius: 8px;
+              margin-right: 20px;
+            }
+          }
+          .image {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+          .nextButton {
+            position: absolute;
+            right: clamp(10px, 33vw, -60px); // Минимум 10px, максимум -60px
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+}

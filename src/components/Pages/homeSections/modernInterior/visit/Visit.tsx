@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useState } from "react";
 import scss from "./Visit.module.scss";
 import Image from "next/image";
@@ -7,11 +7,18 @@ import { PiPhoneCallLight } from "react-icons/pi";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaArrowRight, FaTelegramPlane } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import map from "../../../../../assets/vizit/map.png";
+import { useLanguageStore } from "@/src/stores/useLanguageStore";
+
+const Visit = () => {
+  const { t } = useLanguageStore();
+
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Visit = () => {
   const [active, setActive] = useState<boolean>(false);
+
   return (
     <section className={scss.Visit}>
       <div className="container">
@@ -19,7 +26,13 @@ const Visit = () => {
           <div className={scss.block_1}>
             <div className={scss.vizit}>
               <Image src={left} alt="img" width={51.26} height={14.98} />
-              <h3>Visit Restaurant</h3>
+              <h3>
+                {t(
+                  "Ресторанга барыңыз",
+                  "Посетите ресторан",
+                  "Visit Restaurant"
+                )}
+              </h3>
             </div>
             <h1 className={scss.visit_title}>Join Us for Happy Hours</h1>
             <div className={scss.visit_text_box}>
