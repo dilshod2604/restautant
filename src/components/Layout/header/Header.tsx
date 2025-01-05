@@ -14,7 +14,7 @@ const Header = () => {
   const { t, setLanguage, language } = useLanguageStore();
   const hrefs = [
     { name: t("Интерьер", "Интерьер", "Interior"), href: "interior" },
-    { name: t("Биз жонундо", "О нас", "About Us"), href: "about-us" },
+    { name: t("Биз жонундо", "О нас", "About Us"), href: "about" },
     { name: t("Меню", "Меню", "Menu"), href: "/menu" },
     { name: t("Контакты", "Контакты", "Contacts"), href: "contacts" },
   ];

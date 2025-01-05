@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import scss from "./Visit.module.scss";
 import Image from "next/image";
@@ -7,16 +7,12 @@ import { PiPhoneCallLight } from "react-icons/pi";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaArrowRight, FaTelegramPlane } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
-import map from "../../../../../assets/vizit/map.png";
 import { useLanguageStore } from "@/src/stores/useLanguageStore";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Visit = () => {
   const { t } = useLanguageStore();
-
-import Link from "next/link";
-import { motion } from "framer-motion";
-
-const Visit = () => {
   const [active, setActive] = useState<boolean>(false);
 
   return (
