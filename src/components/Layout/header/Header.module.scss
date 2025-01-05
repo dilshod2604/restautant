@@ -2,7 +2,6 @@
   padding: 20px 0;
   position: fixed;
   top: 0;
-  //   left: 0;
   width: 100%;
   z-index: 100;
   background: #1b2026; /* Полупрозрачный черный фон */
@@ -34,41 +33,38 @@
           color: white;
           font-family: League_Spartan;
           font-weight: 500;
-        }
-      }
-
-      .searchContainer {
-        display: flex;
-        align-items: center;
-        position: relative;
-
-        .searchIcon {
-          position: absolute;
-          left: 10px;
-          color: white; /* Цвет иконки */
-        }
-
-        input {
-          width: clamp(140px, 12vw, 187px);
-          height: clamp(25px, 4vw, 35px);
-          padding-left: 40px; /* Отступ для текста, чтобы не перекрывать иконку */
-          border-radius: 30px;
-          border: none;
-          background: #ef272c;
-          color: white; /* Цвет текста в инпуте */
-          font-size: 14px; /* Размер текста */
-
-          &::placeholder {
-            color: white; /* Белый цвет placeholder */
-            font-size: clamp(
-              10px,
-              1.7vw,
-              16px
-            ); /* Увеличенный размер placeholder */
-            opacity: 1; /* Убираем прозрачность */
+          position: relative;
+          cursor: pointer;
+          &.active::after {
+            content: "";
+            position: absolute;
+            background-color: #ef272c;
+            height: 3px;
+            border-radius: 5px;
+            left: 0;
+            right: 0;
+            bottom: -3px;
+            transform: scaleX(1);
+            transition: transform 0.3s ease;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            background-color: #ef272c;
+            height: 3px;
+            border-radius: 5px;
+            left: 0;
+            right: 0;
+            bottom: -3px;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+          }
+          &:hover::after {
+            transform: scaleX(1);
           }
         }
       }
+
       .select {
         width: clamp(62px, 4vw, 86px);
         height: clamp(25px, 4vw, 37px);
@@ -96,23 +92,53 @@
     .burger {
       display: none;
       flex-direction: column;
+      align-items: end;
       gap: 5px;
       cursor: pointer;
-
-      span {
-        width: 25px;
-        height: 3px;
-        background: white;
-        border-radius: 3px;
-      }
     }
+
+    .burger .short_line,
+    .burger .long_line {
+      width: 25px;
+      height: 2px;
+      background: white;
+      border-radius: 3px;
+      transition: transform 0.5s ease, opacity 0.3s ease;
+    }
+
+    .burger .short_line {
+      width: 15px;
+      opacity: 1;
+    }
+
+    .burger .short_line.active {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    .burger .long_line {
+      transform-origin: center;
+    }
+
+    .burger .long_line.active:nth-child(3) {
+      transform: rotate(45deg) translateX(2);
+    }
+
+    .burger .long_line.active:nth-child(4) {
+      transform: rotate(-45deg) translateX(1);
+    }
+
+    .burger.active {
+      gap: 0;
+    }
+
     @media (max-width: 780px) {
       .menu {
-        display: none; // Скрываем меню на маленьких экранах
+        display: none;
       }
 
       .burger {
-        display: flex; // Показываем бургер-меню
+        display: flex;
       }
     }
   }

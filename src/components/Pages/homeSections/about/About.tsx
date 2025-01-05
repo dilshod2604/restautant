@@ -11,7 +11,7 @@ const About = () => {
   const { t } = useLanguageStore();
 
   return (
-    <section id="about-us" className={scss.About}>
+    <section id="about" className={scss.About}>
       <div className={scss.container}>
         <div className={scss.content}>
           <div className={scss.titleContent}>

@@ -7,15 +7,13 @@ import { PiPhoneCallLight } from "react-icons/pi";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaArrowRight, FaTelegramPlane } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
-import Link from "next/link";
+import { useLanguageStore } from "@/src/stores/useLanguageStore";
 import { motion } from "framer-motion";
 import { useLanguageStore } from "@/src/stores/useLanguageStore";
-
+import Link from "next/link";
 const Visit = () => {
-  const [active, setActive] = useState<boolean>(false);
-
-  const {t} = useLanguageStore()
-
+  const { t } = useLanguageStore();
+  const [active, setActive] = useState<boolean>(false)
   return (
     <section className={scss.Visit}>
       <div className="container">
@@ -23,7 +21,13 @@ const Visit = () => {
           <div className={scss.block_1}>
             <div className={scss.vizit}>
               <Image src={left} alt="img" width={51.26} height={14.98} />
-              <h3>Visit Restaurant</h3>
+              <h3>
+                {t(
+                  "Ресторанга барыңыз",
+                  "Посетите ресторан",
+                  "Visit Restaurant"
+                )}
+              </h3>
             </div>
             <h1 className={scss.visit_title}>Join Us for Happy Hours</h1>
             <div className={scss.visit_text_box}>
@@ -55,7 +59,7 @@ const Visit = () => {
               <motion.span
                 className={`${scss.button_line_1} ${active ? scss.active : ""}`}
                 animate={{
-                  x: active ? -20 : 0,
+                  x: active ? -55 : 0,
                 }}
                 transition={{
                   duration: 0.2,
@@ -65,7 +69,7 @@ const Visit = () => {
               <motion.span
                 className={`${scss.button_line_2} ${active ? scss.active : ""}`}
                 animate={{
-                  x: active ? 20 : 0,
+                  x: active ? 55 : 0,
                 }}
                 transition={{
                   duration: 0.2,

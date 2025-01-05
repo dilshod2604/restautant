@@ -4,7 +4,7 @@ import scss from "./Menu.module.scss";
 import { main_menu } from "@/src/constants/menu";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useMenuModalStore } from "@/src/store/useMenuModalStore";
+import { useMenuModalStore } from "@/src/stores/useMenuModalStore";
 import MenuModal from "@/src/components/UI/menu_modal/MenuModal";
 const Menu = () => {
   const { isOpen, setIsOpen, setItemIndex } = useMenuModalStore();
