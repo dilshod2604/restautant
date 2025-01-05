@@ -14,7 +14,7 @@ interface IDrinks {
   price: number;
 }
 
-interface IMenu {
+export interface IMenu {
   id: number;
   name: string;
   description: string;

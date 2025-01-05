@@ -65,38 +65,6 @@
         }
       }
 
-      .searchContainer {
-        display: flex;
-        align-items: center;
-        position: relative;
-
-        .searchIcon {
-          position: absolute;
-          left: 10px;
-          color: white; /* Цвет иконки */
-        }
-
-        input {
-          width: clamp(140px, 12vw, 187px);
-          height: clamp(25px, 4vw, 35px);
-          padding-left: 40px; /* Отступ для текста, чтобы не перекрывать иконку */
-          border-radius: 30px;
-          border: none;
-          background: #ef272c;
-          color: white; /* Цвет текста в инпуте */
-          font-size: 14px; /* Размер текста */
-
-          &::placeholder {
-            color: white; /* Белый цвет placeholder */
-            font-size: clamp(
-              10px,
-              1.7vw,
-              16px
-            ); /* Увеличенный размер placeholder */
-            opacity: 1; /* Убираем прозрачность */
-          }
-        }
-      }
       .select {
         width: clamp(62px, 4vw, 86px);
         height: clamp(25px, 4vw, 37px);

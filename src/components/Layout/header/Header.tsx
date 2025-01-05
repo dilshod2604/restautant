@@ -1,12 +1,12 @@
 "use client";
 import scss from "./Header.module.scss";
-import { IoSearchOutline } from "react-icons/io5";
 import { useLanguageStore } from "@/src/stores/useLanguageStore";
 import { useBurgerStore } from "@/src/stores/useBurgerStore";
 import BurgerMenu from "../../UI/burger_menu/BurgerMenu";
 import { usePathname, useRouter } from "next/navigation";
 import { Link as ReactScroll } from "react-scroll";
 import Link from "next/link";
+import Search from "../../UI/search/Search";
 
 const Header = () => {
   const { setIsOpen, isOpen } = useBurgerStore();
@@ -62,15 +62,7 @@ const Header = () => {
                 )
               )}
             </nav>
-
-            <div className={scss.searchContainer}>
-              <IoSearchOutline className={scss.searchIcon} />
-              <input
-                className={scss.searchInput}
-                type="text"
-                placeholder={t("Издөө", "Поиск", "Search")}
-              />
-            </div>
+            <Search />
             <select
               onChange={handleLanguageChange}
               value={language}
