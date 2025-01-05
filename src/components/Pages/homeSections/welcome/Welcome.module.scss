@@ -55,6 +55,8 @@
       flex-direction: column;
       width: 300px;
       button {
+        display: flex;
+        align-items: center;
         background: transparent;
         border: none;
         border: 2px solid red;

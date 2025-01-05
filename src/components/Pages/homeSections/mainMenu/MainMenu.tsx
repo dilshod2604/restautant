@@ -148,7 +148,7 @@ const MainMenu = () => {
             <motion.span
               className={`${scss.button_line_1} ${active ? scss.active : ""}`}
               animate={{
-                x: active ? -20 : 0,
+                x: active ? -55 : 0,
               }}
               transition={{
                 duration: 0.2,
@@ -158,7 +158,7 @@ const MainMenu = () => {
             <motion.span
               className={`${scss.button_line_2} ${active ? scss.active : ""}`}
               animate={{
-                x: active ? 20 : 0,
+                x: active ? 55 : 0,
               }}
               transition={{
                 duration: 0.2,

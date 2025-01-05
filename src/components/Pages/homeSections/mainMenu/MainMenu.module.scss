@@ -12,8 +12,9 @@
     h3 {
       color: rgb(255, 255, 255);
       font-family: Shalimar;
-      font-size: clamp(32px, 16vw, 40px);
+      font-size: clamp(24px, 3vw, 40px);
       font-weight: 400;
+      line-height: clamp(37px, 4vw, 61px);
       line-height: 49px;
       letter-spacing: 0%;
       text-align: left;
@@ -23,8 +24,8 @@
     color: rgb(255, 255, 255);
     font-family: Crimson_Text;
     font-size: clamp(24px, 5vw, 40px);
-    font-weight: 600;
     line-height: clamp(37px, 4vw, 61px);
+    font-weight: 600;
     letter-spacing: 0%;
     text-align: left;
   }
@@ -57,7 +58,7 @@
           padding-block: 20px;
           color: rgb(255, 255, 255);
           font-family: Crimson_Text;
-          font-size: 24px;
+          font-size: clamp(20px, 2vw, 24px);
           font-weight: 600;
           line-height: 37px;
           letter-spacing: 0%;
@@ -135,7 +136,7 @@
   }
   .view_all_button {
     position: relative;
-    width: clamp(186px, 14vw, 220px);
+    width: 220px;
     height: 55px;
     margin-top: 61px;
     display: flex;

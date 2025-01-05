@@ -4,7 +4,10 @@ import scss from "./Menu.module.scss";
 import { main_menu } from "@/src/constants/menu";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useMenuModalStore } from "@/src/stores/useMenuModalStore";
+import MenuModal from "@/src/components/UI/menu_modal/MenuModal";
 const Menu = () => {
+  const { isOpen, setIsOpen, setItemIndex } = useMenuModalStore();
   const [isActive, setIsActive] = useState<number>(0);
   const [animationKey, setAnimationKey] = useState(0);
   const [menuData, setMenuData] = useState(
@@ -110,6 +113,10 @@ const Menu = () => {
                 animate="visible"
                 variants={menuItemVariants}
                 custom={index}
+                onClick={() => {
+                  setIsOpen(true, el.category);
+                  setItemIndex(el.id);
+                }}
               >
                 <div className={scss.card_wrapper}>
                   <Image
@@ -139,6 +146,7 @@ const Menu = () => {
           </div>
         </div>
       </div>
+      {isOpen && <MenuModal />}
     </section>
   );
 };
