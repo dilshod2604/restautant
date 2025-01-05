@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import scss from "./Visit.module.scss";
 import Image from "next/image";
@@ -8,8 +9,10 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { FaTelegramPlane } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import map from "../../../../../assets/vizit/map.png";
+import { useLanguageStore } from "@/src/stores/useLanguageStore";
 
 const Visit = () => {
+  const { t } = useLanguageStore();
   return (
     <section className={scss.Visit}>
       <div className="container">
@@ -17,7 +20,13 @@ const Visit = () => {
           <div className={scss.block_1}>
             <div className={scss.vizit}>
               <Image src={left} alt="img" width={51.26} height={14.98} />
-              <h3>Visit Restaurant</h3>
+              <h3>
+                {t(
+                  "Ресторанга барыңыз",
+                  "Посетите ресторан",
+                  "Visit Restaurant"
+                )}
+              </h3>
             </div>
             <div className={scss.vizit_text}>
               <h1>Join Us for Happy Hours</h1>
