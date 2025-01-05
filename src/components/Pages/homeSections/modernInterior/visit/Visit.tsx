@@ -9,12 +9,11 @@ import { FaArrowRight, FaTelegramPlane } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { useLanguageStore } from "@/src/stores/useLanguageStore";
 import { motion } from "framer-motion";
+import { useLanguageStore } from "@/src/stores/useLanguageStore";
 import Link from "next/link";
-
 const Visit = () => {
   const { t } = useLanguageStore();
-  const [active, setActive] = useState<boolean>(false);
-
+  const [active, setActive] = useState<boolean>(false)
   return (
     <section className={scss.Visit}>
       <div className="container">
