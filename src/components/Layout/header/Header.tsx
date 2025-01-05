@@ -1,20 +1,20 @@
 "use client";
-import { FC, useState } from "react";
 import scss from "./Header.module.scss";
-import { links } from "@/src/constants/linkxs";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { IoSearchOutline } from "react-icons/io5";
 import { useLanguageStore } from "@/src/stores/useLanguageStore";
-import { li } from "framer-motion/client";
+import { useBurgerStore } from "@/src/stores/useBurgerStore";
+import BurgerMenu from "../../UI/burger_menu/BurgerMenu";
+import { usePathname, useRouter } from "next/navigation";
+import { Link as ReactScroll } from "react-scroll";
+import Link from "next/link";
 
-const Header: FC = () => {
-  const [showMenu, setShowMenu] = useState(false);
+const Header = () => {
+  const { setIsOpen, isOpen } = useBurgerStore();
   const router = useRouter();
   const { t, setLanguage, language } = useLanguageStore();
   const hrefs = [
     { name: t("Интерьер", "Интерьер", "Interior"), href: "interior" },
-    { name: t("Биз жонундо", "О нас", "About Us"), href: "about" },
+    { name: t("Биз жонундо", "О нас", "About Us"), href: "about-us" },
     { name: t("Меню", "Меню", "Menu"), href: "/menu" },
     { name: t("Контакты", "Контакты", "Contacts"), href: "contacts" },
   ];
@@ -23,7 +23,7 @@ const Header: FC = () => {
     const selectedLanguage = e.target.value as "ky" | "ru" | "en";
     setLanguage(selectedLanguage);
   };
-
+  const path = usePathname();
   return (
     <section className={scss.Header}>
       <div className="container">
@@ -34,12 +34,35 @@ const Header: FC = () => {
           </h1>
           <div className={scss.menu}>
             <nav className={scss.navigation}>
-              {links.map((link) => (
-                <Link key={link.name} href={link.href}>
-                  {link.name}
-                </Link>
-              ))}
+              {hrefs.map((link) =>
+                link.href.startsWith("/") ? (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={scss.nav_link}
+                  >
+                    {link.name}
+                  </Link>
+                ) : path === "/menu" ? (
+                  <Link key={link.href} href="/" className={scss.nav_link}>
+                    {link.name}
+                  </Link>
+                ) : (
+                  <ReactScroll
+                    key={link.href}
+                    to={link.href}
+                    className={scss.nav_link}
+                    activeClass={path === "/" ? scss.active : ""}
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                  >
+                    {link.name}
+                  </ReactScroll>
+                )
+              )}
             </nav>
+
             <div className={scss.searchContainer}>
               <IoSearchOutline className={scss.searchIcon} />
               <input
@@ -58,13 +81,26 @@ const Header: FC = () => {
               <option value="ky">KG</option>
             </select>
           </div>
-          <div className={scss.burger} onClick={() => setShowMenu(!showMenu)}>
-            <span />
-            <span />
-            <span />
+          <div
+            className={`${scss.burger} ${isOpen ? scss.active : ""}`}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <span
+              className={`${scss.short_line} ${isOpen ? scss.active : ""}`}
+            />
+            <span
+              className={`${scss.short_line} ${isOpen ? scss.active : ""}`}
+            />
+            <span
+              className={`${scss.long_line} ${isOpen ? scss.active : ""}`}
+            />
+            <span
+              className={`${scss.long_line} ${isOpen ? scss.active : ""}`}
+            />
           </div>
         </div>
       </div>
+      <BurgerMenu />
     </section>
   );
 };

@@ -58,7 +58,7 @@
           padding-block: 20px;
           color: rgb(255, 255, 255);
           font-family: Crimson_Text;
-          font-size: 24px;
+          font-size: clamp(20px, 2vw, 24px);
           font-weight: 600;
           line-height: 37px;
           letter-spacing: 0%;
@@ -136,7 +136,7 @@
   }
   .view_all_button {
     position: relative;
-    width: clamp(186px, 14vw, 220px);
+    width: 220px;
     height: 55px;
     margin-top: 61px;
     display: flex;

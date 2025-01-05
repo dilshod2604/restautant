@@ -5,7 +5,7 @@ export const links = [
   },
   {
     name: "About Us",
-    href: "#about",
+    href: "#about-us",
   },
   {
     name: "Menu",

@@ -7,8 +7,10 @@ import ModernInterior from "./homeSections/modernInterior/ModernInterior";
 import Visit from "./homeSections/modernInterior/visit/Visit";
 
 const HomePage = () => {
+
   return (
     <React.Fragment>
+   
       <Welcome />
       <About />
       <BestSellers />

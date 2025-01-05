@@ -3,7 +3,7 @@ import React, { useMemo } from "react";
 import scss from "./MenuModal.module.scss";
 import { motion } from "framer-motion";
 import { main_menu } from "@/src/constants/menu";
-import { useMenuModalStore } from "@/src/store/useMenuModalStore";
+import { useMenuModalStore } from "@/src/stores/useMenuModalStore";
 import Image from "next/image";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 const MenuModal = () => {
@@ -165,7 +165,6 @@ const MenuModal = () => {
                           </p>
                         ))}
                       </span>
-                    
                     </div>
                   </div>
                 ))}
