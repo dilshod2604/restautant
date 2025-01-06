@@ -1,0 +1,36 @@
+.preloader {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .preloader_content {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .image_wrapper {
+      width: 200px;
+      height: 200px;
+    }
+    .typing_text {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 35px;
+      color: orange;
+      font-weight: 900;
+      .word_box {
+        display: flex;
+        overflow: hidden;
+        .words {
+          font-size: 40px;
+          font-family: Shalimar;
+          color: white;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

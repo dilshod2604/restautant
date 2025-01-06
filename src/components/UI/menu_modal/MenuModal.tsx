@@ -9,7 +9,7 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 const MenuModal = () => {
   const { close, itemId, category, setItemIndex } = useMenuModalStore();
   //filter item
-  const data = useMemo(() => {
+    const data = useMemo(() => {
     return main_menu.filter((el) => el.id === itemId);
   }, [itemId]);
   //similar items

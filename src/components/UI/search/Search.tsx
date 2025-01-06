@@ -4,11 +4,12 @@ import scss from "./Search.module.scss";
 import { IoSearchOutline } from "react-icons/io5";
 import { useLanguageStore } from "@/src/stores/useLanguageStore";
 import { IMenu, main_menu } from "@/src/constants/menu";
+import { useRouter } from "next/navigation";
 const Search = () => {
   const { t } = useLanguageStore();
   const [value, setValue] = useState<string>("");
   const [searchData, setSearchData] = useState<IMenu[]>([]);
-
+  const router = useRouter();
   useEffect(() => {
     const filterItems = () => {
       if (value.length < 0) {
@@ -41,7 +42,14 @@ const Search = () => {
       {value.length > 0 && (
         <div className={scss.search_result}>
           {searchData.map((el, index) => (
-            <div key={index} className={scss.search_item}>
+            <div
+              key={index}
+              className={scss.search_item}
+              onClick={() => {
+                router.push(`/search/${el.name}`)
+                setValue("")
+              }}
+            >
               <p>{el.name}</p>
               <p className={scss.item_price}>${el.price}</p>
             </div>

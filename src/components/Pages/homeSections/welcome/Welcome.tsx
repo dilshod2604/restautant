@@ -7,6 +7,8 @@ import { GrFormNextLink } from "react-icons/gr";
 import { ImLocation2 } from "react-icons/im";
 import { IoIosCall } from "react-icons/io";
 import { useLanguageStore } from "@/src/stores/useLanguageStore";
+import { useBookingStore } from "@/src/stores/useBookingStore";
+import BookingModal from "@/src/components/UI/booking_modal/BookingModal";
 
 interface Text {
   name: string;
@@ -20,6 +22,7 @@ interface Info {
 
 const Welcome = () => {
   const { t } = useLanguageStore();
+  const { isOpen, setIsOpen } = useBookingStore();
 
   const text: Text = {
     name: t("Италья ашканасы", "Итальянская кухня", "Italian Cuisine"),
@@ -53,7 +56,7 @@ const Welcome = () => {
         <p>{text.descr}</p>
         <div className={scss.btnBlock}>
           <div className={scss.line}></div>
-          <button>
+          <button onClick={() => setIsOpen(true)}>
             {t("Буйрутма беруу", "Заказать столик", "Reserve Your Table")}
             <GrFormNextLink />
           </button>
@@ -80,6 +83,7 @@ const Welcome = () => {
       </div>
       <div className={scss.bottom_line}></div>
       <div className={scss.right_line}></div>
+      {isOpen && <BookingModal />}
     </section>
   );
 };

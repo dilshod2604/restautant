@@ -12,9 +12,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 const Visit = () => {
   const { t } = useLanguageStore();
-  const [active, setActive] = useState<boolean>(false)
+  const [active, setActive] = useState<boolean>(false);
   return (
-    <section className={scss.Visit}>
+    <section className={scss.Visit} id="contacts">
       <div className="container">
         <div className={scss.content}>
           <div className={scss.block_1}>
