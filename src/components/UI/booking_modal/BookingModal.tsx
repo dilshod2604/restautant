@@ -28,7 +28,7 @@ const BookingModal = () => {
         <div className={scss.booking_tools_box}>
           <div className={scss.name_form}>
             <div className={scss.user_icon_wrapper}>
-              <FaRegUser size={30} className={scss.user_icon} />
+              <FaRegUser size={20} className={scss.user_icon} />
             </div>
             <div className={scss.form_input}>
               <span>Name</span>
@@ -42,7 +42,7 @@ const BookingModal = () => {
           </div>
           <div className={scss.phone_form}>
             <div className={scss.phone_icon_wrapper}>
-              <FaPhone size={30} className={scss.phone_icon} />
+              <FaPhone size={20} className={scss.phone_icon} />
             </div>
             <div className={scss.form_input}>
               <span>Phone</span>
