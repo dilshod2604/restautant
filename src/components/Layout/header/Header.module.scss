@@ -121,11 +121,11 @@
     }
 
     .burger .long_line.active:nth-child(3) {
-      transform: rotate(45deg) translateX(2);
+      transform: rotate(45deg) translateX(2) !important;
     }
 
     .burger .long_line.active:nth-child(4) {
-      transform: rotate(-45deg) translateX(1);
+      transform: rotate(-45deg) translateX(1) !important;
     }
 
     .burger.active {
