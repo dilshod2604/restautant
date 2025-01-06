@@ -8,8 +8,10 @@ import { main_menu } from "@/src/constants/menu";
 import { LayoutGroup, motion } from "framer-motion";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
+import { useLanguageStore } from "@/src/stores/useLanguageStore";
 
 const MainMenu = () => {
+  const { t } = useLanguageStore();
   const [isActive, setIsActive] = useState<number>(0);
   const [animationKey, setAnimationKey] = useState(0);
   const [active, setActive] = useState<boolean>(false);
@@ -67,7 +69,11 @@ const MainMenu = () => {
             <Image src={right} alt="img" width={25} height={10} />
           </div>
           <h1>
-            Exceptional Quality. <br /> Delightfully Delicious
+            {t(
+              "Өзгөчө сапат.  Жагымдуу даамдуу",
+              "Исключительное качество.  Восхитительно вкусно",
+              "Exceptional Quality.  Delightfully Delicious"
+            )}
           </h1>
           <div className={scss.blocks}>
             <LayoutGroup>
@@ -142,7 +148,7 @@ const MainMenu = () => {
             onMouseLeave={() => setActive(false)}
           >
             <Link href="/menu" className={scss.button}>
-              View Full menu
+              {t("Толук менюну көрүү", "Посмотреть полное меню", "View Full menu")}
               <FaArrowRight className={scss.button_icon} />
             </Link>
             <motion.span

@@ -6,10 +6,13 @@ import { main_menu } from "@/src/constants/menu";
 import { useMenuModalStore } from "@/src/stores/useMenuModalStore";
 import Image from "next/image";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import { useLanguageStore } from "@/src/stores/useLanguageStore";
 const MenuModal = () => {
   const { close, itemId, category, setItemIndex } = useMenuModalStore();
+
+  const { t } = useLanguageStore();
   //filter item
-    const data = useMemo(() => {
+  const data = useMemo(() => {
     return main_menu.filter((el) => el.id === itemId);
   }, [itemId]);
   //similar items
@@ -116,7 +119,9 @@ const MenuModal = () => {
                   </div>
                   <div className={scss.item_extras_drinks}>
                     <div className={scss.item_extras}>
-                      <p className={scss.extras_title}>Extras</p>
+                      <p className={scss.extras_title}>
+                        {t("Кошумчалар", "Дополнительно", "Extras")}
+                      </p>
                       {el.extras.map((el, index) => (
                         <div key={index} className={scss.extra_item}>
                           <p className={scss.item_name}>{el.name}</p>
@@ -125,7 +130,9 @@ const MenuModal = () => {
                       ))}
                     </div>
                     <div className={scss.item_drinks}>
-                      <p className={scss.drinks_title}>Drinks</p>
+                      <p className={scss.drinks_title}>
+                        {t("Суусундуктар", "Напитки", "Drinks")}
+                      </p>
                       {el.drinks.map((el, index) => (
                         <div key={index} className={scss.drinks_item}>
                           <p className={scss.item_name}>{el.name}</p>
@@ -138,7 +145,9 @@ const MenuModal = () => {
               ))}
             </div>
             <div className={scss.menu_similar_items}>
-              <h1 className={scss.similar_items_title}>Similar gueries</h1>
+              <h1 className={scss.similar_items_title}>
+                {t("Окшош кептер", "Похожие вопросы", "Similar gueries")}
+              </h1>
               <div className={scss.similar_item_content}>
                 {similar.map((el, index) => (
                   <div
