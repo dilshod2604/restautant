@@ -28,21 +28,39 @@ const Visit = () => {
                 )}
               </h3>
             </div>
-            <h1 className={scss.visit_title}>Join Us for Happy Hours</h1>
+            <h1 className={scss.visit_title}>
+              {t(
+                "Бактылуу сааттар үчүн Бизге кошулуңуз",
+                "Присоединяйтесь к нам на счастливые часы",
+                "Join Us for Happy Hours"
+              )}
+            </h1>
             <div className={scss.visit_text_box}>
               <div className={scss.visit_text_box1}>
-                <h4>Your neighborhood</h4>
+                <h4>
+                  {t("Сиздин кошунаңыз", "Ваш район", "Your neighborhood")}
+                </h4>
                 <p className={scss.vizit_text_date_1}>
                   225$.Lake Ave.Suite 1150 Pasadena,CA 911101
                 </p>
               </div>
               <div className={scss.visit_text_box_2}>
-                <h4>Opening hours:</h4>
+                <h4>
+                  {t("Иштөө сааттары:", "Часы работы:", "Opening hours:")}
+                </h4>
                 <p className={scss.vizit_text_date}>
-                  Mon-Thu: 10:00 am - 01:00 am
+                  {t(
+                    "Дүйшөмбү-Бш: 10:00 - 01:00",
+                    "Пн-Чт: 10:00 - 01:00",
+                    "Mon-Thu: 10:00 am - 01:00 am"
+                  )}
                 </p>
                 <p className={scss.vizit_text_date}>
-                  Fri-Sun: 10:00 am - 02:00 am
+                  {t(
+                    "Жума-Жек: 10:00 - 02:00",
+                    "Пт-Вс: 10:00 - 02:00",
+                    "Fri-Sun: 10:00 am - 02:00 am"
+                  )}
                 </p>
               </div>
             </div>
@@ -52,7 +70,11 @@ const Visit = () => {
               onMouseLeave={() => setActive(false)}
             >
               <Link href="#" className={scss.button}>
-                Purchase gift card
+                {t(
+                  "Белек картасын сатып алуу",
+                  "Приобрести подарочную карту",
+                  "Purchase gift card"
+                )}
                 <FaArrowRight className={scss.button_icon} />
               </Link>
               <motion.span
@@ -78,7 +100,9 @@ const Visit = () => {
             </div>
           </div>
           <div className={scss.block_2}>
-            <h1>contact Info</h1>
+            <h1>
+              {t("байланыш маалыматы", "контактная информация", "contact Info")}
+            </h1>
             <p>
               <PiPhoneCallLight />
               +771219900
