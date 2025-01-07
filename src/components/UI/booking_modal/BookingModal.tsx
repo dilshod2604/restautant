@@ -12,7 +12,7 @@ const BookingModal = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className={scss.Booking_modal}>
+    <div className={scss.Booking_modal} onClick={() => setIsOpen(!isOpen)}>
       <motion.div
         className={scss.content}
         initial={{ x: "-100%", opacity: 0 }}
